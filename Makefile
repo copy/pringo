@@ -52,7 +52,8 @@ testresults:
 TESTS=seq8 seq32 seq64 block-13 \
   treesplit-1 treesplit-4 laggedsplit-3 laggedsplit-10
 
-ALLTESTS=$(TESTS:%=splitmix-%) $(TESTS:%=chacha-%)
+#ALLTESTS=$(TESTS:%=splitmix-%) $(TESTS:%=chacha-%) $(TESTS:%=xoshiro-%)
+ALLTESTS=$(TESTS:%=xoshiro-%)
 
 SMALLTESTS=$(ALLTESTS:%=testresults/ent-%.log)
 
